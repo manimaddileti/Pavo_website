@@ -35,12 +35,17 @@
     background: linear-gradient(to right, #cce7ff, #fde2e4);
     padding: 1rem 2rem;
     box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    position: fixed;
+    left: 0;
+    right: 0;
+    top: 0;
   }
   
   .navbar {
     display: flex;
     justify-content: space-between;
     align-items: center;
+    
   }
   
   .logo img {
