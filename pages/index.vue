@@ -1,35 +1,32 @@
 <template>
   <Navbar />
-  <div class="container">
-    <HomePage />
-  </div>
+  <HomePage />
 </template>
 
 <script setup>
-import Navbar from '~/components/Navbar.vue';
-import HomePage from '~/components/HomePage.vue';
+import Navbar from "~/components/Navbar.vue";
+import HomePage from "~/components/HomePage.vue";
 useHead({
-  title: "Pavo Webpage Title"
-})
+  title: "Pavo Webpage Title",
+});
 </script>
 
 <style scoped>
-
 body {
   font-family: Arial, sans-serif;
   margin: 0;
   padding: 0;
-  background-color: #e0f7ff;
+  background-color: skyblue;
 }
 
 .container {
   width: 100%;
-  max-width: 1200px;  /* Maximum width */
-  margin: 0 auto;  /* Center the content */
-  padding: 0 20px;  /* padding to leftright and  */
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 0 20px;
+  background: white;
 }
 
-/* The navigation remains unchanged */
 .header {
   background: linear-gradient(to right, #cce7ff, #fde2e4);
   padding: 1rem 2rem;
@@ -61,7 +58,7 @@ body {
 
 .buttons {
   display: flex;
-  gap: 1rem;
+  gap: 2rem;
 }
 
 .btn {
@@ -164,4 +161,3 @@ body {
   box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
 }
 </style>
-
