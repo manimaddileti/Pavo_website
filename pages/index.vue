@@ -10,5 +10,3 @@ useHead({
   title: "Pavo Webpage Title",
 });
 </script>
-
-

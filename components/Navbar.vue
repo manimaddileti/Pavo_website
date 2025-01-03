@@ -28,20 +28,25 @@
   </header>
 </template>
 
-<script setup>
+<script setup lang="ts">
 import { apple, Pavoicon, android } from "~/assets/img/images";
 import { ref, onMounted, onUnmounted } from "vue";
-const isMenuOpen = ref(false);
-const isScrolled = ref(false);
-function toggleMenu() {
+
+const isMenuOpen = ref<boolean>(false);
+const isScrolled = ref<boolean>(false);
+
+function toggleMenu(): void {
   isMenuOpen.value = !isMenuOpen.value;
 }
-function handleScroll() {
+
+function handleScroll(): void {
   isScrolled.value = window.scrollY > 0;
 }
+
 onMounted(() => {
   window.addEventListener("scroll", handleScroll);
 });
+
 onUnmounted(() => {
   window.removeEventListener("scroll", handleScroll);
 });
@@ -49,8 +54,8 @@ onUnmounted(() => {
 
 <style scoped>
 .header {
-  background-color: skyblue;
-  transition: background-color 0.3s ease, box-shadow 0.3s ease;
+  background-color: lightskyblue;
+  transition: background-color 0.5s ease, box-shadow 0.5s ease;
   padding: 1rem 4rem;
   position: fixed;
   left: 0;
